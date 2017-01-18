@@ -1,0 +1,41 @@
+{
+    "proxy":{
+        "port": 8888, 
+        "max_connection_num" : 1000,
+        "init_connection_num" : 10,
+        "strategy" : 1,
+        "app_name" : "mysqlproxy",
+        "log_type" : 3,
+        "log_level": 8,
+        "log_root" : "D:/project/go/log"
+    },
+
+    "auth":{
+        "username": "fan",
+        "password": "fan",
+
+        "db_username": "fan",
+        "db_password": "fan",
+        "hosts" :[
+            {
+                "master": {"host": "192.168.0.104", "port": 3306},
+                "slaves" : [
+                    {"host": "192.168.0.104", "port": 3306},
+                    {"host": "192.168.0.104", "port": 3306}
+                ]
+            },
+            {
+                "master": {"host": "192.168.0.104", "port": 3306},
+                "slaves" : [
+                    {"host": "192.168.0.104", "port": 3306},
+                    {"host": "192.168.0.1", "port": 3306}
+                ]
+            }
+        ]
+    },
+
+    "white_ips": [
+        "*",
+        "192.168.0.10"
+    ]
+}
